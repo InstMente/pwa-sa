@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import instanciaApi from './Api';
 
 class ServicoAutenticacao {
   async login(email, senha) {
+
     const response = await instanciaApi.post('/login', { email, senha });
     localStorage.setItem('usuario-logado', JSON.stringify(response.data));
+ 
   }
 
   buscarUsuarioLogado() {

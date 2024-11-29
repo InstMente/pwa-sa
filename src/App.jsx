@@ -10,6 +10,7 @@ import PaginaListaClientes from './paginas/PaginaListaClientes/PaginaListaClient
 import PaginaLogin from './paginas/PaginaLogin/PaginaLogin';
 import PaginaMeuPerfil from './paginas/PaginaMeuPerfil/PaginaMeuPerfil';
 import PaginaNovoUsuario from './paginas/PaginaNovoUsuario/PaginaNovoUsuario';
+import PaginaProduto from './paginas/PaginaProduto/PaginaProduto';
 
 const router = createBrowserRouter([
   {
@@ -34,8 +35,8 @@ const router = createBrowserRouter([
         element: <PaginaListaClientes />,
       },
       {
-        path: 'cadastro-cliente/:id?',
-        element: <PaginaCadastroCliente />,
+        path: 'cadastro-produto',
+        element: <PaginaProduto />,
       },
       {
         path: 'meu-perfil',

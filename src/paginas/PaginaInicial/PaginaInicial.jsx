@@ -8,14 +8,12 @@ const PaginaInicial = () => {
 
   return (
     <Principal titulo="Página Inicial">
-      <BotaoCustomizado aoClicar={() => navigate('/lista-produtos')}>Lista Produtos</BotaoCustomizado>
-
-      <BotaoCustomizado cor="secundaria" aoClicar={() => navigate('/lista-tarefas')}>
-        Lista de Tarefas
-      </BotaoCustomizado>
-
       <BotaoCustomizado cor="primaria" aoClicar={() => navigate('/lista-clientes')}>
         Lista de Clientes
+      </BotaoCustomizado>
+
+      <BotaoCustomizado cor="primaria" aoClicar={() => navigate('/cadastro-produto')}>
+        Adicionar produto
       </BotaoCustomizado>
     </Principal>
   );
