@@ -7,7 +7,7 @@ Aulas de frontend(ReacJS) + PWA ministrada na dissiciplina Programação de Apli
 Clone o projeto:
 
 ```bash
-  git clone https://github.com/thiagocordeirooo/aulas-frontend-senai.git
+  git clone https://github.com/InstMente/pwa-sa.git
 ```
 
 Entre no diretório do projeto:
