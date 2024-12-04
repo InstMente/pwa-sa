@@ -20,7 +20,7 @@ const PaginaLogin = () => {
         return;
       }
 
-      await instanciaServicoAutenticacao.login(email, senha);
+     await instanciaServicoAutenticacao.login(email, senha);
       navigate('/');
     } catch (error) {
       toast.error(error.response.data);
@@ -28,7 +28,7 @@ const PaginaLogin = () => {
   };
 
   return (
-    <Principal titulo="Entrar">
+    <Principal titulo="Entrar" >
       <div className="campo">
         <label>Email</label>
         <input type="email" placeholder="Digite seu email" value={email} onChange={(e) => setEmail(e.target.value)} />

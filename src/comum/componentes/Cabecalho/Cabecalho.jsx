@@ -19,6 +19,7 @@ function Cabecalho() {
           <Avatar nome={usuarioLogado.nome} />
         </Link>
       )}
+
     </header>
   );
 }

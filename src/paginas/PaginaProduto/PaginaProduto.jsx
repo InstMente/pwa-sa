@@ -6,21 +6,36 @@ import { toast } from "react-toastify"
 import ServicoProduto from "../../comum/servicos/ServicoProduto"
 
 const instanciaServicoProduto = new ServicoProduto();
-
 const PaginaProduto = () => {
 
-    const [nomeProduto, setNomeProduto] = useState('')
-    const [descricaoProduto, setDescricaoProduto] = useState('')
-    const [valorProduto, setValorProduto] = useState('')
-    const [fotoProduto, setFotoProduto] = useState('')
+    const [nomeProduto, setNomeProduto] = useState('');
+    const [descricaoProduto, setDescricaoProduto] = useState('');
+    const [valorProduto, setValorProduto] = useState('');
+    const [fotoProduto, setFotoProduto] = useState('');
+
+    const fotoBase = (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const base64String = event.target.result;
+
+                setFotoProduto(base64String);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    };
 
     const cadastrarProduto = async () => {
         try {
-            if (!nomeProduto || !descricaoProduto || !valorProduto || !fotoProduto){
+            if (!nomeProduto || !descricaoProduto || !valorProduto || !fotoProduto) {
                 toast.error('Preencha os dados solicitados.');
                 return;
             }
-            
+
             const produto = {
                 nomeProduto,
                 descricaoProduto,
@@ -28,11 +43,11 @@ const PaginaProduto = () => {
                 fotoProduto
             };
 
-            await instanciaServicoProduto.cadastrarProduto(produto)
+            await instanciaServicoProduto.cadastrarProduto(produto);
             toast.success('Cadastro do produto realizado com sucesso');
         } catch (error) {
             console.error(error);
-            toast.error(error.response.data);
+            toast.error(error.response?.data || 'Erro ao cadastrar produto.');
         }
     };
 
@@ -40,44 +55,45 @@ const PaginaProduto = () => {
         <Principal titulo='Cadastro de produtos'>
             <div className="campo">
                 <label>Nome do produto</label>
-                <input 
-                type="text" 
-                placeholder="..."
-                value={nomeProduto}
-                onChange={(e) => setNomeProduto(e.target.value)}
+                <input
+                    type="text"
+                    placeholder="..."
+                    value={nomeProduto}
+                    onChange={(e) => setNomeProduto(e.target.value)}
                 />
             </div>
             <div className="campo">
                 <label>Descrição</label>
-                <input 
-                type="text" 
-                placeholder="..."
-                value={descricaoProduto}
-                onChange={(e) => setDescricaoProduto(e.target.value)}
+                <input
+                    type="text"
+                    placeholder="..."
+                    value={descricaoProduto}
+                    onChange={(e) => setDescricaoProduto(e.target.value)}
                 />
             </div>
             <div className="campo">
                 <label>Valor</label>
-                <input 
-                type="text" 
-                placeholder="..."
-                value={valorProduto}
-                onChange={(e) => setValorProduto(e.target.value)}
+                <input
+                    type="text"
+                    placeholder="..."
+                    value={valorProduto}
+                    onChange={(e) => setValorProduto(e.target.value)}
                 />
             </div>
             <div className="campo">
                 <label>Foto</label>
-                <input 
-                type="file" 
-                placeholder="..."
-                onChange={(e) => setFotoProduto(e.target.files[0])}
+                <input
+                    type="file"
+                    accept="image/*"
+                    multiple={false}
+                    onChange={fotoBase}
                 />
             </div>
             <BotaoCustomizado cor='primaria' aoClicar={cadastrarProduto}>
                 Cadastrar
             </BotaoCustomizado>
         </Principal>
-    )
-}
+    );
+};
 
-export default PaginaProduto
+export default PaginaProduto;
