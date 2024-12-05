@@ -7,6 +7,14 @@
   gap: 16px;
   background-color: #F7F9FC;
   color: #333333;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+}
+
+.principal_root{
+
+  scroll-snap-align: start;
+
 }
 
 .principal_titulo {
@@ -27,4 +35,5 @@
    
 
 }
+
 
