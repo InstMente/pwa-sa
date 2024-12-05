@@ -15,6 +15,7 @@ import PaginaRegistroVendas from './paginas/PaginaRegistroVendas/PaginaRegistroV
 import PaginaSettings from './paginas/PaginaSettings/PaginaSettings';
 import PaginaMeusAnuncio from './paginas/PaginaMeusAnuncios/PaginaMeusAnuncios';
 import PaginaCadastroCliente from './paginas/PaginaCadastroCliente/PaginaCadastroCliente';
+import PaginaDetalhesProdutos from './paginas/PaginaDetalhesProdutos/PaginaDetalhesProdutos';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: 'meus-anuncios',
         element: <PaginaMeusAnuncio />,
+      },
+      {
+        path: 'compra-produto',
+        element: <PaginaDetalhesProdutos />
       },
     ],
   },
