@@ -17,7 +17,7 @@ export default defineConfig({
       ],
       manifest: {
         name: 'Aulas Frontend com ReactJS + PWA',
-        short_name: 'Aulas Frontend PWA',
+        short_name: 'BreShop',
         description: 'É um projeto para...',
         theme_color: '#ffffff',
         background_color: '#ffffff',
