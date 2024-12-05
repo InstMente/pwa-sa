@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import Principal from '../../comum/componentes/Principal/Principal';
 import './PaginaInicial.css';
 import ServicoProduto from '../../comum/servicos/ServicoProduto';
@@ -9,7 +8,6 @@ const instanciaServicoProduto = new ServicoProduto();
 
 const PaginaInicial = () => {
   
-  const navigate = useNavigate()  
   const [listarProdutos, setListarProdutos] = useState([]);
 
   useEffect(() => {
@@ -24,15 +22,8 @@ const PaginaInicial = () => {
     
     <Principal titulo="Página Inicial">
 
-    {listarProdutos.map((produto) => {
-      return(
-       <CardProduto produto={produto} key={produto.id}>
-       </CardProduto>
-      );
-    })}
-      {/* /* <BotaoCustomizado cor="primaria" aoClicar={() => navigate('/lista-clientes')}>
-        Lista de Clientes
-      </BotaoCustomizado> */}
+    {listarProdutos.map((produto, i) => 
+       <CardProduto produto={produto} key={i}/> )}
      
     </Principal>
   );

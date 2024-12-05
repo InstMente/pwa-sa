@@ -9,6 +9,8 @@ app.use(cors({ origin: "*" }));
 //Rota publicas
 const _usuariosController = new UsuariosController();
 const _autenticacaoController = new AutenticacaoController();
+
+
 app.get("/usuarios", _usuariosController.listar);
 app.post("/login", _autenticacaoController.login);
 app.post("/usuarios", _usuariosController.adicionar);

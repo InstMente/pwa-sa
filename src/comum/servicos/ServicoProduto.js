@@ -7,8 +7,11 @@ class ServicoProduto {
     }
     listarProdutos() {
 
-        return instanciaApi.get('/produto')
+        return instanciaApi.get('/produto/list')
         
+    }
+    listByUser(id) {
+        return instanciaApi.get('/produto', {headers:{"x-usuario":id}})
     }
 }
 

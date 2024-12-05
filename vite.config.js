@@ -4,7 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      include: "*/.jsx",
+    }),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
@@ -35,4 +37,9 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    watch: {
+      usePolling: true
+    }
+  }
 });

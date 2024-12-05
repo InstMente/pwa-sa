@@ -1,6 +1,6 @@
 // src/comum/componentes/CardProduto/CardProduto.jsx
 import React from 'react';
-import './CardProduto.css';  // Aqui você pode estilizar seu card.
+import './CardProduto.css';  
 import { Link } from 'react-router-dom';
 
 const CardProduto = ({ produto }) => {
