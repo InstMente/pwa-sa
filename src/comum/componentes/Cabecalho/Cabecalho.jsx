@@ -11,7 +11,7 @@ function Cabecalho() {
   return (
     <header className="cabecalho_root">
       <Link to="/">
-        <img src="/src/assets/logoBreShopWPNG.png" height={64} />
+        <img src="/logoBreShopWPNG.png" height={64} />
       </Link>
 
       {usuarioLogado && (
