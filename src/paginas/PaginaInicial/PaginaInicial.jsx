@@ -26,7 +26,8 @@ const PaginaInicial = () => {
 
     {listarProdutos.map((produto) => {
       return(
-       <CardProduto produto={produto} key={produto.id}></CardProduto>
+       <CardProduto produto={produto} key={produto.id}>
+       </CardProduto>
       );
     })}
       {/* /* <BotaoCustomizado cor="primaria" aoClicar={() => navigate('/lista-clientes')}>
