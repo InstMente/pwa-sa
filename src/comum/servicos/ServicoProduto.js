@@ -13,6 +13,17 @@ class ServicoProduto {
     listByUser(id) {
         return instanciaApi.get('/produto', {headers:{"x-usuario":id}})
     }
+    // excluirProduto(produto){
+
+    //     return instanciaApi.excluirProduto("/produto/:id", produto)
+
+    // }
+
+    excluirProduto(idProduto) {
+        // Garante que o ID é passado corretamente na URL
+        return axios.delete(`/produto/${idProduto}`);
+      }
+    
 }
 
 export default ServicoProduto;

@@ -3,7 +3,11 @@ import Principal from "../../comum/componentes/Principal/Principal";
 const PaginaDetalhesProdutos =() => {
 
     
-    return;
+    return(
+        <Principal>
+            
+        </Principal>
+    );
 }
 
 export default PaginaDetalhesProdutos;
