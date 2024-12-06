@@ -19,9 +19,8 @@ class ServicoProduto {
 
     // }
 
-    excluirProduto(idProduto) {
-        // Garante que o ID é passado corretamente na URL
-        return axios.delete(`/produto/${idProduto}`);
+    excluirProduto(produto) {
+        return axios.delete(`/produto/${produto.id}`);
       }
     
 }
