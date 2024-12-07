@@ -48,6 +48,10 @@ const router = createBrowserRouter([
         element: <PaginaProduto />,
       },
       {
+        path: 'cadastro-produto/:id',
+        element: <PaginaProduto />,
+      },
+      {
         path: 'meu-perfil',
         element: <PaginaMeuPerfil />,
       },

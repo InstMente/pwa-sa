@@ -1,4 +1,4 @@
-// src/comum/componentes/CardProduto/CardProduto.jsx
+
 import React, { useState } from 'react';
 import './CardMeusAnuncios.css';
 import { Await, Link, useNavigate } from 'react-router-dom';
@@ -9,6 +9,12 @@ import instanciaApi from '../../servicos/Api';
 const CardMeusAnuncios = ({ produto }) => {
     const navigate = useNavigate();
     const [listarProdutos, setListarProdutos] = useState([]);
+
+    const editarProduto = (idProduto) => {
+
+        navigate(`/cadastro-produto/${idProduto}`)
+
+    }
 
     const excluirProduto = (idProduto) => {
         if (confirm('Tem certeza?')) {
@@ -26,7 +32,7 @@ const CardMeusAnuncios = ({ produto }) => {
                     <p>Preço: R${produto.preco_produto}</p>
                     <p>{produto.descricao_produto.substr(0, 10) + "..."}</p>
                 <FaTrashAlt onClick={() => excluirProduto(produto.id_produtos)} id='excluir' ></FaTrashAlt>
-                <FaEdit id='editar'></FaEdit>
+                <FaEdit onClick={() => editarProduto(produto.id_produtos)} id='editar'></FaEdit>
                 </div>
             </div>
         </Link>

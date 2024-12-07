@@ -7,13 +7,13 @@ const Search = ({ onSearch }) => {
 
     const handleSearch = () => {
         if (onSearch) {
-            onSearch(searchTerm); 
+            onSearch(searchTerm);
         }
     };
 
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
-            handleSearch(); 
+            handleSearch();
         }
     };
 

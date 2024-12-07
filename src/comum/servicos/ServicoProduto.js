@@ -23,6 +23,11 @@ class ServicoProduto {
         return instanciaApi.get(`/produto/${id}`).catch(e => e.response.data)
 
     }
+    editarProduto(id, produto){
+
+        return instanciaApi.get(`/produto/list/${id}`, produto)
+
+    }   
     
 }
 

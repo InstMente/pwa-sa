@@ -31,7 +31,7 @@ const PaginaInicial = () => {
 
     <Principal titulo="BreShop">
      
-      <Search onSearch={c => setSearch(c)}/>
+      <Search onSearch={c => setSearch(c)} />
       {listarProdutos.map((produto, i) =>
 
         <CardProduto produto={produto} key={i} />)}
