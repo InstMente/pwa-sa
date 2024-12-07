@@ -64,7 +64,7 @@ const router = createBrowserRouter([
         element: <PaginaMeusAnuncio />,
       },
       {
-        path: 'compra-produto',
+        path: 'produto/:id',
         element: <PaginaDetalhesProdutos />
       },
     ],

@@ -18,6 +18,11 @@ class ServicoProduto {
         return instanciaApi.delete(`/produto/list/${id}`);
 
     }
+    getById(id){
+
+        return instanciaApi.get(`/produto/${id}`).catch(e => e.response.data)
+
+    }
     
 }
 

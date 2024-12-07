@@ -1,6 +1,6 @@
 
 .pesquisa {
-  position: relative;
+  
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -8,7 +8,6 @@
 }
 
 .iconPesquisar {
-  position: absolute;
   right: 20px;
   transform: translateY(15%);
   transform: translateX(-7px);
