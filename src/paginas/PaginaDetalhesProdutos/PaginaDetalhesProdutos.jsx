@@ -43,11 +43,14 @@ const PaginaDetalhesProdutos = () => {
                     <p>Descrição:{produto.descricao_produto}</p>
             </div>
             </div>}
-            {usuarios && <div className="localizacao">
+        {usuarios && <div className="localizacao">
+            <div className="campo">
                         <p>Nome do Anunciante:{usuarios.nome}</p>
                         <p>Email:{usuarios.email} </p>
-                        <p>Numero:{usuarios.telefone}</p>
+                        <p>Numero:{usuarios.celular}</p>
                         <p>Cep:{usuarios.cep}</p>
+
+            </div>
             </div>}
 
         </Principal>
