@@ -45,6 +45,7 @@ body,
 .campo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 4px;
 
   & > label {
@@ -52,6 +53,7 @@ body,
   }
 
   & > input {
+    
     padding: 16px;
     font-size: 16px;
     border-radius: 16px;

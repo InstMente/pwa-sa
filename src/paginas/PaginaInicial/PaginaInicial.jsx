@@ -22,9 +22,12 @@ const PaginaInicial = () => {
   return (
 
     <Principal titulo="BreShop">
-      <div className='pesquisa'>
+      <div className='campo'>
 
-        <input className='campo' type="text" placeholder='Pesquisar' onClick={() => listarProdutos()}/><FaSearch  className='iconPesquisar'></FaSearch>
+        <input  type="text" placeholder='Pesquisar' />
+        <FaSearch  className='iconPesquisar' onClick={() => listarProdutos()}>
+          
+        </FaSearch>
       </div>
       {listarProdutos.map((produto, i) =>
         <CardProduto produto={produto} key={i} />)}

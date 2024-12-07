@@ -1,24 +1,18 @@
-input {
-    padding: 16px;
-    font-size: 16px;
-    border-radius: 16px;
-    border: 1.5px solid black;
-    width: 100%;
-  }
-  .pesquisa {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-  }
-  
-  .iconPesquisar {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 25px; /* Tamanho do ícone */
-    color: #888;
-    pointer-events: none;
-  }
+
+.pesquisa {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.iconPesquisar {
+  position: absolute;
+  right: 20px;
+  transform: translateY(15%);
+  transform: translateX(-7px);
+  font-size: 25px;
+  color: #888;
+  cursor: pointer;
+}

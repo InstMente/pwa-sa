@@ -2,7 +2,6 @@
 import React from 'react';
 import './CardProduto.css';  
 import { Link } from 'react-router-dom';
-import BotaoCustomizado from '../BotaoCustomizado/BotaoCustomizado';
 
 const CardProduto = ({ produto }) => {
     return (

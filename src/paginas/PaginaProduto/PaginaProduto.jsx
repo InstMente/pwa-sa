@@ -4,9 +4,11 @@ import Principal from "../../comum/componentes/Principal/Principal"
 import './PaginaProduto.css'
 import { toast } from "react-toastify"
 import ServicoProduto from "../../comum/servicos/ServicoProduto"
+import { useNavigate } from "react-router-dom"
 
 const instanciaServicoProduto = new ServicoProduto();
 const PaginaProduto = () => {
+    const navigate = useNavigate();
 
     const [nomeProduto, setNomeProduto] = useState('');
     const [descricaoProduto, setDescricaoProduto] = useState('');
@@ -45,6 +47,8 @@ const PaginaProduto = () => {
 
             await instanciaServicoProduto.cadastrarProduto(produto);
             toast.success('Cadastro do produto realizado com sucesso');
+            
+            navigate("/");
         } catch (error) {
             console.error(error);
             toast.error(error.response?.data || 'Erro ao cadastrar produto.');
