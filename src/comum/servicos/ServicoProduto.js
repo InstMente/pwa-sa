@@ -1,34 +1,29 @@
-import instanciaApi from "./Api"
+import instanciaApi from "./Api";
 
 class ServicoProduto {
-    cadastrarProduto(produto) {
-        return instanciaApi.post('/produto', produto)
-        
-    }
-    listarProdutos() {
+  cadastrarProduto(produto) {
+    return instanciaApi.post('/produto', produto);
+  }
 
-        return instanciaApi.get('/produto/list')
-        
-    }
-    listByUser(id) {
-        return instanciaApi.get('/produto', {headers:{"x-usuario":id}})
-    }
-    excluirProduto(id){
+  listarProdutos() {
+    return instanciaApi.get('/produto/list');
+  }
 
-        return instanciaApi.delete(`/produto/list/${id}`);
+  listByUser(id) {
+    return instanciaApi.get('/produto', { headers: { "x-usuario": id } });
+  }
 
-    }
-    getById(id){
+  excluirProduto(id) {
+    return instanciaApi.delete(`/produto/list/${id}`);
+  }
 
-        return instanciaApi.get(`/produto/${id}`).catch(e => e.response.data)
+  getById(id) {
+    return instanciaApi.get(`/produto/${id}`).catch(e => e.response ? e.response.data : "Erro ao buscar produto");
+  }
 
-    }
-    editarProduto(id, produto){
-
-        return instanciaApi.get(`/produto/list/${id}`, produto)
-
-    }   
-    
+  editarProduto(id, produto) {
+    return instanciaApi.put(`/produto/${id}`, produto);
+  }
 }
 
 export default ServicoProduto;
