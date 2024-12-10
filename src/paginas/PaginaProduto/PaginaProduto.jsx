@@ -11,7 +11,7 @@ const instanciaServicoProduto = new ServicoProduto();
 
 const PaginaProduto = () => {
   const navigate = useNavigate();
-  const { id } = useParams(); // Simplificação do params
+  const { id } = useParams(); 
 
   const [nomeProduto, setNomeProduto] = useState("");
   const [descricaoProduto, setDescricaoProduto] = useState("");
@@ -38,14 +38,18 @@ const PaginaProduto = () => {
       if (id) {
         try {
           const response = await instanciaApi.get(`/produto/${id}`);
+          console.log("Dados da resposta da API:", response.data);
+
           if (response.data) {
-            setNomeProduto(response.data.nomeProduto || "");
-            setDescricaoProduto(response.data.descricaoProduto || "");
-            setValorProduto(response.data.valorProduto || "");
-            setFotoProduto(response.data.fotoProduto || "");
+            setNomeProduto(response.data.nome_produto || "");
+            setDescricaoProduto(response.data.descricao_produto || "");
+            setValorProduto(response.data.preco_produto || "");
+            setFotoProduto(response.data.foto_produto || "");
+
+          } else {
+            toast.error("Nenhum dado encontrado.");
           }
         } catch (error) {
-          console.error(error);
           toast.error("Erro ao buscar produto.");
         }
       }
@@ -69,11 +73,9 @@ const PaginaProduto = () => {
       };
 
       if (id) {
-        // Editar produto
-        await instanciaServicoProduto.editarProduto(id, produto);
+        await instanciaServicoProduto.editarProduto(produto);
         toast.success("Produto editado com sucesso.");
       } else {
-        // Cadastrar produto
         await instanciaServicoProduto.cadastrarProduto(produto);
         toast.success("Produto cadastrado com sucesso.");
       }
@@ -97,7 +99,7 @@ const PaginaProduto = () => {
         <label>Nome do produto</label>
         <input
           type="text"
-          placeholder="..."
+          placeholder="...insira o nome"
           value={nomeProduto}
           onChange={(e) => setNomeProduto(e.target.value)}
         />
@@ -106,7 +108,7 @@ const PaginaProduto = () => {
         <label>Descrição</label>
         <input
           type="text"
-          placeholder="..."
+          placeholder="...insira a descrição"
           value={descricaoProduto}
           onChange={(e) => setDescricaoProduto(e.target.value)}
         />
@@ -115,7 +117,7 @@ const PaginaProduto = () => {
         <label>Valor</label>
         <input
           type="text"
-          placeholder="..."
+          placeholder="...insira o valor"
           value={valorProduto}
           onChange={(e) => setValorProduto(e.target.value)}
         />

@@ -11,7 +11,7 @@ class ServicoProduto {
 
   listByUser(id) {
     return instanciaApi.get('/produto', { headers: { "x-usuario": id } });
-  }
+  }  
 
   excluirProduto(id) {
     return instanciaApi.delete(`/produto/list/${id}`);
