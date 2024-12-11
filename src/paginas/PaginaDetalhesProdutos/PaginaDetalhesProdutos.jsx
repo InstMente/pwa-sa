@@ -31,7 +31,7 @@ const PaginaDetalhesProdutos = () => {
             {produto && <div className="compra-produto">
                 <img src={produto.foto_produto} id="imgProduto"></img>
                 <div className="campo">
-                    <h2>Nome:{produto.nome_produto}</h2>
+                    <h2>{produto.nome_produto}</h2>
                     <p>Preço: R${produto.preco_produto}</p>
                     <p>Descrição:{produto.descricao_produto}</p>
                 </div>

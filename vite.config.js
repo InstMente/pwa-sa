@@ -24,7 +24,7 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
-            src: 'icons/icon-192x192.png',
+            src: 'public/icons/logoBreShopWPNG.png',
             sizes: '192x192',
             type: 'image/png',
           },
