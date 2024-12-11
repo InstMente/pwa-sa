@@ -66,6 +66,7 @@ const PaginaProduto = () => {
       }
 
       const produto = {
+        id,
         nomeProduto,
         descricaoProduto,
         valorProduto,
@@ -99,7 +100,7 @@ const PaginaProduto = () => {
         <label>Nome do produto</label>
         <input
           type="text"
-          placeholder="...insira o nome"
+          placeholder="insira o nome"
           value={nomeProduto}
           onChange={(e) => setNomeProduto(e.target.value)}
         />
@@ -108,7 +109,7 @@ const PaginaProduto = () => {
         <label>Descrição</label>
         <input
           type="text"
-          placeholder="...insira a descrição"
+          placeholder="insira a descrição"
           value={descricaoProduto}
           onChange={(e) => setDescricaoProduto(e.target.value)}
         />
@@ -117,7 +118,7 @@ const PaginaProduto = () => {
         <label>Valor</label>
         <input
           type="text"
-          placeholder="...insira o valor"
+          placeholder="insira o valor"
           value={valorProduto}
           onChange={(e) => setValorProduto(e.target.value)}
         />

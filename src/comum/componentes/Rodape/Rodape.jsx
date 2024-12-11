@@ -14,7 +14,7 @@ function Rodape() {
 
       <FaHome size={38} color='white' onClick={() => navigate("/")}></FaHome>
       <FaPlus size={38} color='white' onClick={() => navigate("/cadastro-produto")}></FaPlus>
-      <IoStorefront size={38} color='white' onClick={() => navigate("/anuncio")}></IoStorefront>
+      <IoStorefront size={38} color='white' onClick={() => navigate("/meus-anuncios")}></IoStorefront>
     </footer>
   );
 }

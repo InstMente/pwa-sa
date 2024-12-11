@@ -21,8 +21,8 @@ class ServicoProduto {
     return instanciaApi.get(`/produto/${id}`).catch(e => e.response ? e.response.data : "Erro ao buscar produto");
   }
 
-  editarProduto(id, produto) {
-    return instanciaApi.put(`/produto/${id}`, produto);
+  editarProduto(produto) {
+    return instanciaApi.put(`/produto/${produto.id}`, produto);
   }
 }
 
