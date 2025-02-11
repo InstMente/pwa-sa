@@ -1,6 +1,6 @@
 # BreShop E-commerce
 
-Um site para compra e venda de roupas.
+Uma plataforma exclusiva para a compra e venda de roupas, oferecendo uma experiência diferenciada para consumidores e vendedores. Nosso objetivo é facilitar a conexão entre amantes da moda, proporcionando um ambiente seguro e eficiente para transações. Aproveite uma vasta seleção de peças de vestuário, com opções que atendem a todos os estilos e preferências. Acreditamos na sustentabilidade e na promoção de um consumo consciente, promovendo a reciclagem de roupas de qualidade e a valorização da moda circular.
 
 # Integrantes:
 
