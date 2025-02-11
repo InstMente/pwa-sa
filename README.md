@@ -1,7 +1,6 @@
-BreShop E-commerce
+#BreShop E-commerce
 
-Um site para compra e venda de roupas!
-##
+Um site para compra e venda de roupas.
 
 #Integrantes:
 
