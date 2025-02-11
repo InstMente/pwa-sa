@@ -1,8 +1,8 @@
-#BreShop E-commerce
+# BreShop E-commerce
 
 Um site para compra e venda de roupas.
 
-#Integrantes:
+# Integrantes:
 
 [Gabriel O. Bion](https://github.com/bion23ouriquess)
 
